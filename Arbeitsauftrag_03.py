@@ -24,7 +24,7 @@ visitor_list = []
 
 # Checker Variables
 valid_chars_name = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäÄöÖüÜß"
-valid_chars_address = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäÄöÖüÜß._-0123456789 "
+valid_chars_address = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäÄöÖüÜß.,_-/0123456789 "
 valid_chars_postal = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZß0123456789"
 valid_chars_city = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZßäÄöÖüÜ"
 valid_chars_country = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZßäÄöÖüÜ"
@@ -77,12 +77,12 @@ while True:
 
         # ADDRESS
         while True:
-            address_employee = input("Enter Your Street Name and Numbers: ")
+            address_employee = input("Enter Address: ")
 
             if all(char in valid_chars_address for char in address_employee):
                 break
             else:
-                print("Address invalid")
+                print("Address invalid.")
 
 
         # POSTAL CODE
@@ -92,7 +92,7 @@ while True:
             if all(char in valid_chars_postal for char in postal_employee):
                 break
             else:
-                print("Postal Code Invalid")
+                print("Postal Code Invalid.")
 
 
         # CITY
@@ -102,7 +102,7 @@ while True:
             if all(char in valid_chars_city for char in city_employee):
                 break
             else:
-                print("City Name Invalid")
+                print("City Name Invalid.")
 
 
         # COUNTRY
@@ -112,7 +112,7 @@ while True:
             if all(char in valid_chars_country for char in country_employee):
                 break
             else:
-                print("Country Name Invalid")
+                print("Country Name Invalid.")
 
 
         # BIRTHDAY
@@ -122,7 +122,7 @@ while True:
             if all(char in valid_chars_birthday for char in birthday_employee):
                 break
             else:
-                print("Birthday Invalid")
+                print("Birthday Invalid.")
 
 
         # AGE
@@ -132,7 +132,7 @@ while True:
             if all(char in valid_chars_age for char in age_employee):
                 break
             else:
-                print("Age Invalid")
+                print("Age Invalid.")
 
 
         # EMAIL
@@ -142,7 +142,7 @@ while True:
             if all(char in valid_chars_email for char in email_employee):
                 break
             else:
-                print("Email Invalid")
+                print("Email Invalid.")
 
 
 
@@ -158,7 +158,7 @@ while True:
 
 
     # MENU (2) - CREATE NEW VISITOR
-    if choice == "2":
+    elif choice == "2":
 
 
         # FIRST NAME
@@ -181,12 +181,12 @@ while True:
 
         # ADDRESS
         while True:
-            address_visitor = input("Enter Your Street Name and Numbers: ")
+            address_visitor = input("Enter Address: ")
 
             if all(char in valid_chars_address for char in address_visitor):
                 break
             else:
-                print("Address invalid")
+                print("Address invalid.")
 
 
         # POSTAL CODE
@@ -196,7 +196,7 @@ while True:
             if all(char in valid_chars_postal for char in postal_visitor):
                 break
             else:
-                print("Postal Code Invalid")
+                print("Postal Code Invalid.")
 
 
         # CITY
@@ -206,7 +206,7 @@ while True:
             if all(char in valid_chars_city for char in city_visitor):
                 break
             else:
-                print("City Name Invalid")
+                print("City Name Invalid.")
 
 
         # COUNTRY
@@ -216,7 +216,7 @@ while True:
             if all(char in valid_chars_country for char in country_visitor):
                 break
             else:
-                print("Country Name Invalid")
+                print("Country Name Invalid.")
 
 
         # BIRTHDAY
@@ -226,7 +226,7 @@ while True:
             if all(char in valid_chars_birthday for char in birthday_visitor):
                 break
             else:
-                print("Birthday Invalid")
+                print("Birthday Invalid.")
 
 
         # AGE
@@ -236,7 +236,7 @@ while True:
             if all(char in valid_chars_age for char in age_visitor):
                 break
             else:
-                print("Age Invalid")
+                print("Age Invalid.")
 
 
         # EMAIL
@@ -246,7 +246,7 @@ while True:
             if all(char in valid_chars_email for char in email_visitor):
                 break
             else:
-                print("Email Invalid")
+                print("Email Invalid.")
 
 
 
@@ -316,7 +316,7 @@ while True:
         break
 
 
-    # INVALID CHOICE
+# INVALID CHOICE
     else:
         print("---------------")
         print("Invalid choice.")
