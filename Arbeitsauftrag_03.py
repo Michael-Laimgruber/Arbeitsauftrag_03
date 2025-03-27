@@ -1,38 +1,22 @@
-from Test_Routine import id_employee
-
 # -----------------------------------------------------------#
 # -----------------------------------------------------------#
 # -----------------------------------------------------------#
 
-# Employee Lists
-# id_employee = []                # List - employee ID
-# id_employee_counter = 1         # List - employee generate unique IDs
+# LISTS and VARIABLES
+# Unique ID counter Employees
+id_employee = 1
 
-id_employee = 1         # List - employee generate unique IDs
-
+#employee_list
 employee_list = []
 
-
-
-
-
-# -----------------------------------------------------------#
-# -----------------------------------------------------------#
 # -----------------------------------------------------------#
 
-# Visitor Lists
-# id_visitor = []                 # List - visitor ID
-# id_visitor_counter = 1          # List - visitor generate unique IDs
-#
-# first_name_visitor = []         # List - visitor first name
-# last_name_visitor = []          # List - visitor last name
-# address_visitor = []            # List - visitor address
-# postal_code_visitor = []        # List - visitor postal code
-# city_visitor = []               # List - visitor city
-# country_visitor = []            # List - visitor country
-# birthday_visitor = []           # List - visitor birthday
-# age_visitor = []                # List - visitor age
-# email_visitor = []              # List - visitor email address
+# Unique ID counter Visitors
+id_visitor = 1
+
+#visitor_list
+visitor_list = []
+
 
 # -----------------------------------------------------------#
 # -----------------------------------------------------------#
@@ -72,35 +56,30 @@ while True:
     # MENU (1) - CREATE NEW EMPLOYEE
     if choice == "1":
 
+
         # FIRST NAME
         while True:
             first_name_employee = input("Enter First Name: ")
-
-            # all function returns True or False if ->
-            # -> if characters in user input "first_name_employee_temp" exist in valid_chars_name variable
-            # -> if everything OK break to next input ELSE error message
-            # -> repeat this for every user_input
             if all(char in valid_chars_name for char in first_name_employee):
                 break
             else:
-                print("First Name Invalid")
+                print("First Name Invalid. Only letters are allowed.")
 
 
         # LAST NAME
         while True:
             last_name_employee = input("Enter Last Name: ")
-
             if all(char in valid_chars_name for char in last_name_employee):
                 break
             else:
-                print("Last Name Invalid")
+                print("Last Name Invalid. Only letters are allowed.")
 
 
         # ADDRESS
         while True:
-            address_street_employee = input("Enter Your Street Name and Numbers: ")
+            address_employee = input("Enter Your Street Name and Numbers: ")
 
-            if all(char in valid_chars_address for char in address_street_employee):
+            if all(char in valid_chars_address for char in address_employee):
                 break
             else:
                 print("Address invalid")
@@ -165,130 +144,106 @@ while True:
             else:
                 print("Email Invalid")
 
-    # print("-------------------------------")
-    # print("Employee was successfully added")
-    # print("-------------------------------")
 
 
-    # DATA PUSH INTO LIST
 
-    employee_list.append([id_employee, first_name_employee, last_name_employee, address_street_employee, postal_employee, city_employee, country_employee, birthday_employee, age_employee, email_employee])
-    id_employee += 1
+        # DATA PUSH INTO LIST
+        employee_list.append([id_employee, first_name_employee, last_name_employee, address_employee, postal_employee, city_employee, country_employee, birthday_employee, age_employee, email_employee])
+        id_employee += 1
 
-
-    # employee_list.append(id_employee)
-    # employee_list.append(first_name_employee)
-    # employee_list.append(last_name_employee)
-    # employee_list.append(address_street_employee)
-    # employee_list.append(postal_employee)
-    # employee_list.append(city_employee)
-    # employee_list.append(country_employee)
-    # employee_list.append(birthday_employee)
-    # employee_list.append(age_employee)
-    # employee_list.append(email_employee)
-    #
-    # employee_list.append(employee_list)
-    # id_employee_counter += 1
-    #
-    # id_employee = 1  # List - employee generate unique IDs
-    #
-    # employee_list = []
-
-        # id_employee.append(id_employee_counter)
-        #
-        # first_name_employee.append(first_name_employee_temp)
-        # last_name_employee.append(last_name_employee_temp)
-        # address_employee.append(address_street_employee_temp)
-        # postal_code_employee.append(postal_employee_temp)
-        # city_employee.append(city_employee_temp)
-        # country_employee.append(country_employee_temp)
-        # birthday_employee.append(birthday_employee_temp)
-        # age_employee.append(age_employee_temp)
-        # email_employee.append(email_employee_temp)
+        # USABILITY
+        print("-------------------------------")
+        print("Employee was successfully added")
+        print("-------------------------------")
 
 
     # MENU (2) - CREATE NEW VISITOR
-    elif choice == "2":
+    if choice == "2":
 
-        # -----------------------------------------------------------#
 
-        # FIRST NAME VISITOR
+        # FIRST NAME
         while True:
-            first_name_visitor_temp = input("Enter First Name: ")
-
-            if all(char in valid_chars_name for char in first_name_visitor_temp):
+            first_name_visitor = input("Enter First Name: ")
+            if all(char in valid_chars_name for char in first_name_visitor):
                 break
             else:
-                print("First Name Invalid")
+                print("First Name Invalid. Only letters are allowed.")
 
-        # LAST NAME VISITOR
+
+        # LAST NAME
         while True:
-            last_name_visitor_temp = input("Enter Last Name: ")
-
-            if all(char in valid_chars_name for char in last_name_visitor_temp):
+            last_name_visitor = input("Enter Last Name: ")
+            if all(char in valid_chars_name for char in last_name_visitor):
                 break
             else:
-                print("Last Name Invalid")
+                print("Last Name Invalid. Only letters are allowed.")
 
-        # ADDRESS VISITOR
+
+        # ADDRESS
         while True:
-            address_street_visitor_temp = input("Enter Your Street Name and Numbers: ")
+            address_visitor = input("Enter Your Street Name and Numbers: ")
 
-            if all(char in valid_chars_address for char in address_street_visitor_temp):
+            if all(char in valid_chars_address for char in address_visitor):
                 break
             else:
                 print("Address invalid")
 
-        # POSTAL CODE VISITOR
-        while True:
-            postal_visitor_temp = input("Enter Postal Code: ")
 
-            if all(char in valid_chars_address for char in postal_visitor_temp):
+        # POSTAL CODE
+        while True:
+            postal_visitor = input("Enter Postal Code: ")
+
+            if all(char in valid_chars_postal for char in postal_visitor):
                 break
             else:
                 print("Postal Code Invalid")
 
-        # CITY VISITOR
-        while True:
-            city_visitor_temp = input("Enter City: ")
 
-            if all(char in valid_chars_city for char in city_visitor_temp):
+        # CITY
+        while True:
+            city_visitor = input("Enter City: ")
+
+            if all(char in valid_chars_city for char in city_visitor):
                 break
             else:
                 print("City Name Invalid")
 
-        # COUNTRY VISITOR
-        while True:
-            country_visitor_temp = input("Enter Your Country: ")
 
-            if all(char in valid_chars_country for char in country_visitor_temp):
+        # COUNTRY
+        while True:
+            country_visitor = input("Enter Your Country: ")
+
+            if all(char in valid_chars_country for char in country_visitor):
                 break
             else:
                 print("Country Name Invalid")
 
-        # BIRTHDAY VISITOR
-        while True:
-            birthday_visitor_temp = input("Enter Your Birthday In The Format DD.MM.YYYY: ")
 
-            if all(char in valid_chars_birthday for char in birthday_visitor_temp):
+        # BIRTHDAY
+        while True:
+            birthday_visitor = input("Enter Your Birthday In The Format DD.MM.YYYY: ")
+
+            if all(char in valid_chars_birthday for char in birthday_visitor):
                 break
             else:
                 print("Birthday Invalid")
 
-        # AGE VISITOR
-        while True:
-            age_visitor_temp = input("Enter Your Age: ")
 
-            if all(char in valid_chars_age for char in age_visitor_temp):
+        # AGE
+        while True:
+            age_visitor = input("Enter Your Age: ")
+
+            if all(char in valid_chars_age for char in age_visitor):
                 break
             else:
                 print("Age Invalid")
 
-        # EMAIL VISITOR
-        while True:
-            email_visitor_temp = input("Enter Your Email: ")
 
-            if all(char in valid_chars_email for char in email_visitor_temp):
+        # EMAIL
+        while True:
+            email_visitor = input("Enter Your Email: ")
+
+            if all(char in valid_chars_email for char in email_visitor):
                 break
             else:
                 print("Email Invalid")
@@ -296,92 +251,76 @@ while True:
 
 
 
-        # DATA PUSH INTO LIST VISITOR
+        # DATA PUSH INTO LIST
+        visitor_list.append([id_visitor, first_name_visitor, last_name_visitor, address_visitor, postal_visitor, city_visitor, country_visitor, birthday_visitor, age_visitor, email_visitor])
+        id_visitor += 1
 
-        # id_visitor.append(id_visitor_counter)
-        # first_name_visitor.append(first_name_visitor_temp)
-        # last_name_visitor.append(last_name_visitor_temp)
-        # address_visitor.append(address_street_visitor_temp)
-        # postal_code_visitor.append(postal_visitor_temp)
-        # city_visitor.append(city_visitor_temp)
-        # country_visitor.append(country_visitor_temp)
-        # birthday_visitor.append(birthday_visitor_temp)
-        # age_visitor.append(age_visitor_temp)
-        # email_visitor.append(email_visitor_temp)
-        # # UNIQUE ID COUNTER +1
-        # id_visitor_counter += 1
+        # USABILITY
+        print("-------------------------------")
+        print("Employee was successfully added")
+        print("-------------------------------")
 
 
     # MENU (3) SHOW ALL EMPLOYEES
     elif choice == "3":
+        if not employee_list:
+            print("No employees stored yet.\n")
+        else:
+            print("\nEmployee List:")
+            print("-------------------------------------------------")
+            for employee_element in employee_list:
+                print(f"ID: {employee_element[0]}, First Name: {employee_element[1]}, Last Name: {employee_element[2]}, Address: {employee_element[3]}, Postal Code: {employee_element[4]}, City: {employee_element[5]}, Country: {employee_element[6]}, Birthday: {employee_element[7]}, Age: {employee_element[8]}, Email: {employee_element[9]}")
+            print("-------------------------------------------------\n")
+
+
+    # MENU (4) SHOW ALL VISITORS
+    elif choice == "4":
+        if not visitor_list:
+            print("No visitors stored yet.\n")
+        else:
+            print("\nVisitor List:")
+            print("-------------------------------------------------")
+            for visitor_element in visitor_list:
+                print(f"ID: {visitor_element[0]}, First Name: {visitor_element[1]}, Last Name: {visitor_element[2]}, Address: {visitor_element[3]}, Postal Code: {visitor_element[4]}, City: {visitor_element[5]}, Country: {visitor_element[6]}, Birthday: {visitor_element[7]}, Age: {visitor_element[8]}, Email: {visitor_element[9]}")
+            print("-------------------------------------------------\n")
+
+
+    # MENU (5) SHOW ALL
+    elif choice == "5":
 
         if not employee_list:
             print("No employees stored yet.\n")
         else:
-            # print("\nEmployee List:")
-            # print("-------------------------------------------------")
-
+            print("\nEmployee List:")
+            print("-------------------------------------------------")
             for employee_element in employee_list:
-                print(f"ID: {employee_element[0]}, First Name: {employee_element[1]}, Last Name: {employee_element[2]} Address: {employee_element[3]}, Postal Code: {employee_element[4]}, City: {employee_element[5]}, Country: {employee_element[6]}, Birthday: {employee_element[7]}, Age: {employee_element[8]}, Email: {employee_element[9]}")
+                print(f"ID: {employee_element[0]}, First Name: {employee_element[1]}, Last Name: {employee_element[2]}, Address: {employee_element[3]}, Postal Code: {employee_element[4]}, City: {employee_element[5]}, Country: {employee_element[6]}, Birthday: {employee_element[7]}, Age: {employee_element[8]}, Email: {employee_element[9]}")
+            print("-------------------------------------------------")
 
 
-    # # MENU (4) SHOW ALL VISITORS
-    # elif choice == "4":
-    #
-    #     if not id_visitor:
-    #         print("-------------------------")
-    #         print(" No Visitors Stored Yet. ")
-    #         print("-------------------------")
-    #     else:
-    #         print("\nVisitor List:")
-    #         print("-------------------------------------------------")
-    #         for i in range(len(id_visitor)):
-    #             print(f"ID: {id_visitor[i]}, Name: {first_name_visitor[i]} {last_name_visitor[i]}, Address: {address_visitor[i]}, Postal Code: {postal_code_visitor[i]}, City: {city_visitor[i]}, Country: {country_visitor[i]}, Birthday: {birthday_visitor[i]}, Age: {age_visitor[i]}, Email: {email_visitor[i]}")
-    #         print("-------------------------------------------------\n")
+        if not visitor_list:
+            print("No visitors stored yet.\n")
+        else:
+            print("\nVisitor List:")
+            print("-------------------------------------------------")
+            for visitor_element in visitor_list:
+                print(f"ID: {visitor_element[0]}, First Name: {visitor_element[1]}, Last Name: {visitor_element[2]}, Address: {visitor_element[3]}, Postal Code: {visitor_element[4]}, City: {visitor_element[5]}, Country: {visitor_element[6]}, Birthday: {visitor_element[7]}, Age: {visitor_element[8]}, Email: {visitor_element[9]}")
+            print("-------------------------------------------------\n")
 
-
-    # MENU (5) SHOW ALL
-
-    # elif choice == "5":
-    #
-    #     if not id_employee:
-    #         print("-------------------------")
-    #         print(" No Employees Stored Yet. ")
-    #         print("-------------------------")
-    #     else:
-    #         print("\nEmployee List:")
-    #         print("-------------------------------------------------")
-    #         for i in range(len(id_employee)):
-    #             print(
-    #                 f"ID: {id_employee[i]}, Name: {first_name_employee[i]} {last_name_employee[i]}, Address: {address_employee[i]}, Postal Code: {postal_code_employee[i]}, City: {city_employee[i]}, Country: {country_employee[i]}, Birthday: {birthday_employee[i]}, Age: {age_employee[i]}, Email: {email_employee[i]}")
-    #         print("-------------------------------------------------\n")
-    #
-    #     if not id_visitor:
-    #         print("-------------------------")
-    #         print(" No Visitors Stored Yet. ")
-    #         print("-------------------------")
-    #     else:
-    #         print("\nVisitor List:")
-    #         print("-------------------------------------------------")
-    #         for i in range(len(id_visitor)):
-    #             print(
-    #                     f"ID: {id_visitor[i]}, Name: {first_name_visitor[i]} {last_name_visitor[i]}, Address: {address_visitor[i]}, Postal Code: {postal_code_visitor[i]}, City: {city_visitor[i]}, Country: {country_visitor[i]}, Birthday: {birthday_visitor[i]}, Age: {age_visitor[i]}, Email: {email_visitor[i]}")
-    #             print("-------------------------------------------------\n")
-    #
 
     # MENU (6) EXIT PROGRAM
     elif choice == "6":
-        print("----------------------------------------------------")
-        print("There Is No Exit. You Are Trapped Here Forever. Lol.")
-        print("----------------------------------------------------")
+        print("----------------")
+        print("Have a nice day.")
+        print("----------------")
         break
 
 
-    # U STOOPID
+    # INVALID CHOICE
     else:
-        print("-----------------")
-        print("Invalid choice yo")
-        print("-----------------")
+        print("---------------")
+        print("Invalid choice.")
+        print("---------------")
 
 pass
 
