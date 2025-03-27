@@ -257,7 +257,7 @@ while True:
 
         # USABILITY
         print("-------------------------------")
-        print("Employee was successfully added")
+        print("Visitor was successfully added")
         print("-------------------------------")
 
 
